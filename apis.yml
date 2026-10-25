@@ -1,25 +1,75 @@
 aid: answerai
+
 name: Answer.AI
-description: 'Answer.AI is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by decibel) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.answer.ai/posts/flying-thumbnail.png
+
+description: 'Answer.AI is an AI research and development lab that builds practical end‑user products based on foundational AI breakthroughs. The company publishes research articles, open‑source tools, and offers APIs for AI‑enhanced applications across coding, life‑sciences, and data synthesis. Their public site provides detailed documentation, blog posts, and links to their GitHub and Hugging Face collections, reflecting a commitment to open, reproducible AI research.'
+
 url: https://raw.githubusercontent.com/api-evangelist/answerai/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+- AI
+- Research
+- OpenSource
+- Products
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+common:
+- type: LLMsTxt
+  url: llms/answerai-llms.txt
+- type: Hosts
+  url: hosts/answerai-hosts.yml
+- type: Vendors
+  url: vendors/answerai-vendors.yml
+- type: DomainSecurity
+  url: security/answerai-domain-security.yml
+- type: Website
+  url: https://www.answer.ai
+- type: GitHubOrganization
+  url: https://github.com/answerdotai
+- type: Documentation
+  url: https://www.answer.ai
+- type: APIReference
+  url: https://www.answer.ai
+- type: GettingStarted
+  url: https://www.answer.ai/posts/2023-12-12-launch.html
+
+apis: []
+
 x-backed-by:
 - decibel
-common:
-- type: Website
-  url: https://answer.ai
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public developer documentation or API specification was found on answer.ai.
+  evidence:
+    - url: https://www.answer.ai
+      status: 200
+  checked: '2026-10-24'
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
